@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="keywords" content="Hobbies, Photography, Webcomics, Reading, Arni Karmila, UiTM" />
+   <meta name="description" content="Explore Arni Karmila's passions, hobbies, photography gallery, and favorite books." />
+   <meta name="author" content="Arni Karmila" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>My Hobbies</title>
+
+   <link rel="stylesheet" type="text/css" href="style.css" />
+
+   <style type="text/css">
+       /* PAGE BACKGROUND */
+       body {
+           margin: 0;
+           padding: 40px 20px;
+           font-family: Georgia, serif;
+           background-image: url('images/background5.jpg.jpg');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+           background-color: #fcfbf7;
+           text-align: center;
+       }
+
+       /* MAIN CONTAINER */
+       .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            background: #fffdf7;
+            border: 4px solid #d7c3b3;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+       }
+
+       /* NAVIGATION AREA */
+       .navigation-area {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #d7c3b3;
+       }
+       .navigation-area nav a {
+            color: #721826;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            font-size: 15px;
+       }
+       .navigation-area nav a:hover {
+            color: #d4af37;
+            text-decoration: underline;
+       }
+
+       .page-title {
+           font-size: 42px;
+           color: #d4af37;
+           font-weight: bold;
+           margin-top: 10px;
+           margin-bottom: 5px;
+           letter-spacing: 1px;
+       }
+
+       .instruction {
+           color: #3e3328;
+           font-style: italic;
+           margin-bottom: 40px;
+           font-size: 16px;
+       }
+
+       .hobby-section {
+           background: #fff;
+           border: 2px solid #eadecc;
+           border-radius: 15px;
+           padding: 30px;
+           margin-bottom: 40px;
+           text-align: left;
+       }
+
+       .hobby-name {
+           color: #721826;
+           font-family: Georgia, serif;
+           font-size: 28px;
+           font-weight: bold;
+           margin-bottom: 15px;
+           border-bottom: 2px solid #f4ede2;
+           padding-bottom: 8px;
+           margin-top: 0;
+       }
+
+       /* GRID SYSTEM */
+       .media-grid {
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           gap: 30px;
+           padding: 15px 0;
+           width: 100%;
+           box-sizing: border-box;
+       }
+
+       /* POLAROID STYLE */
+       .polaroid {
+           position: relative;
+           width: 100%;
+           max-width: 310px;
+           background: #fff;
+           padding: 12px 12px 25px 12px;
+           border: 1px solid #e2e2e2;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+           text-align: center;
+           box-sizing: border-box;
+           margin: auto;
+       }
+     
+       .polaroid img, .polaroid video {
+           width: 100%;
+           height: 250px;
+           object-fit: cover;
+           background-color: #f5f5f5;
+           border-radius: 2px;
+           display: block;
+       }
+
+       /* CAPTION UNDER POLAROID */
+       .polaroid-caption {
+           margin-top: 15px;
+           font-size: 13px;
+           color: #544438;
+           line-height: 1.4;
+           text-align: center;
+       }
+
+       .polaroid-caption strong {
+           color: #721826;
+           display: block;
+           font-size: 15px;
+           margin-bottom: 4px;
+           font-family: Georgia, serif;
+       }
+
+       /* SCRAPBOOK EFFECT */
+       .polaroid:nth-child(3n+1) { transform: rotate(-2deg); }
+       .polaroid:nth-child(3n+2) { transform: rotate(2deg); }
+       .polaroid:nth-child(3n) { transform: rotate(-1.5deg); }
+
+       /* HOVER EFFECT */
+       .polaroid:hover {
+           transform: rotate(0deg) scale(1.06);
+           z-index: 10;
+           box-shadow: 0 15px 30px rgba(114, 24, 38, 0.25);
+       }
+
+       /* SLIDER STYLE INSIDE POLAROID */
+       .slider-container {
+           position: relative;
+           width: 100%;
+           height: 250px;
+           overflow: hidden;
+       }
+
+       .slides {
+           display: none;
+           width: 100%;
+           height: 100%;
+       }
+
+       .slides img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+       }
+
+       /* SLIDE BUTTON */
+       .prev, .next {
+           cursor: pointer;
+           position: absolute;
+           top: 50%;
+           width: auto;
+           padding: 10px;
+           margin-top: -22px;
+           color: white;
+           font-weight: bold;
+           font-size: 18px;
+           transition: 0.6s ease;
+           border-radius: 0 3px 3px 0;
+           user-select: none;
+           background-color: rgba(0,0,0,0.3);
+           z-index: 5;
+       }
+
+       .next {
+           right: 0;
+           border-radius: 3px 0 0 3px;
+       }
+
+       .prev:hover, .next:hover {
+           background-color: rgba(0,0,0,0.8);
+       }
+
+       /* LAYOUT RESPONSIVE FOR SMALL SCREENS */
+       @media (max-width: 950px) {
+           .media-grid { grid-template-columns: repeat(2, 1fr); }
+       }
+       @media (max-width: 600px) {
+           .media-grid { grid-template-columns: 1fr; }
+       }
+
+       .quote-section {
+           margin-top: 40px;
+           font-style: italic;
+           color: #8c7662;
+           font-size: 16px;
+           font-family: Georgia, serif;
+           text-align: center;
+           margin-bottom: 30px;
+       }
+
+       .footer-text {
+            margin-top: 40px;
+            font-style: italic;
+            color: #8c7662;
+            font-size: 14px;
+            font-family: Georgia, serif;
+            border-top: 1px solid #eadecc;
+            padding-top: 20px;
+       }
+   </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navigation-area">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="education.html">Education</a>
+                <a href="family.html">Family</a>
+                <a href="friends.html">Friends</a>
+                <a href="hobbies.html">Hobbies</a>
+                <a href="gallery.html">Gallery</a>
+            </nav>
+        </div>
+
+        <h1 class="page-title">My Passions &amp; Hobbies</h1>
+        <p class="instruction">These are the activities that bring me joy and fulfillment.</p>
+
+        <div class="hobby-section">
+            <h2 class="hobby-name">Photography</h2>
+            <p style="color: #544438; line-height: 1.6; margin-bottom: 20px; margin-top: 0;">
+                Photography is my way of capturing moments and telling stories through images.
+            </p>
+            
+            <div class="media-grid">
+                <div class="polaroid">
+                    <img src="images/photo.jpg.jpg" alt="Penang Town Hall" />
+                    <div class="polaroid-caption">
+                        <strong>Penang Town Hall</strong> - A historic landmark in Penang, Malaysia.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/photo2.jpg.jpg" alt="Armenian Street" />
+                    <div class="polaroid-caption">
+                        <strong>Armenian Street</strong> - A vibrant cultural district in Penang, Malaysia.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/photo3.jpg.jpg" alt="Penang Street Art" />
+                    <div class="polaroid-caption">
+                        <strong>Penang Street Art</strong> - Colorful murals adorning the streets of Penang, Malaysia.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/photo4.jpg.jpg" alt="Turtle Mural" />
+                    <div class="polaroid-caption">
+                        <strong>Turtle Mural</strong> - A stunning mural in Penang, Malaysia.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/photo5.jpg.jpg" alt="Aquaria KLCC" />
+                    <div class="polaroid-caption">
+                        <strong>Aquaria KLCC</strong> - A magnificent aquarium in Kuala Lumpur, Malaysia.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/photo6.jpg.jpg" alt="Beach View" />
+                    <div class="polaroid-caption">
+                        <strong>Beach View</strong> - A scenic view of the beach in Tanjung Dawai, Merbok.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/photo7.jpg.jpg" alt="Petronas Twin Towers" />
+                    <div class="polaroid-caption">
+                        <strong>Petronas Twin Towers</strong> - Iconic skyscrapers in Kuala Lumpur, Malaysia.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <video src="images/video8.jpg.mp4" controls="controls" muted="muted" preload="auto">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="polaroid-caption">
+                        <strong>Window View</strong> - A peaceful cinematic clip of endless green paddy fields passing by from the train window.
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+        <div class="hobby-section">
+            <h2 class="hobby-name">Webcomics &amp; Online Novels</h2>
+            <p style="color: #544438; line-height: 1.6; margin-bottom: 20px; margin-top: 0;">
+                Diving into fictional worlds is my absolute favorite way to escape and unwind after a busy day of assignments. From breathtaking art styles and stunning illustrations in webcomics to deep storytelling in online novels, these pages always keep my imagination alive.
+            </p>
+
+            <div class="media-grid">
+                <div class="polaroid">
+                    <div class="slider-container">
+                        <div class="slides"><img src="images/comic1.jpg.jpg" alt="On My Way to See Mom 1" /></div>
+                        <div class="slides"><img src="images/comic.jpg.jpg" alt="On My Way to See Mom 2" /></div>
+                        <div class="slides"><img src="images/comic2.jpg.jpg" alt="On My Way to See Mom 3" /></div>
+                        <div class="slides"><img src="images/comic3.jpg.jpg" alt="On My Way to See Mom 4" /></div>
+
+                        <a class="prev" onclick="plusSlides(this, -1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(this, 1)">&#10095;</a>
+                    </div>
+                    <div class="polaroid-caption">
+                        <strong>On My Way to See Mom</strong>
+                        I am absolutely in love with the soft, heartwarming, and expressive art style in this webcomic.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="slider-container">
+                        <div class="slides"><img src="images/comic4.jpg.jpg" alt="Whale Star 1" /></div>
+                        <div class="slides"><img src="images/comic5.jpg.jpg" alt="Whale Star 2" /></div>
+                        <div class="slides"><img src="images/comic6.jpg.jpg" alt="Whale Star 3" /></div>
+                        <div class="slides"><img src="images/comic7.jpg.jpg" alt="Whale Star 4" /></div>
+
+                        <a class="prev" onclick="plusSlides(this, -1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(this, 1)">&#10095;</a>
+                    </div>
+                    <div class="polaroid-caption">
+                        <strong>Whale Star</strong>
+                        The Gyeongseong Mermaid's illustrations are a masterpiece—every panel feels like a museum painting.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/book.jpg.jpg" alt="Days at the Morisaki Bookshop" />
+                    <div class="polaroid-caption">
+                        <strong>Morisaki Bookshop</strong>
+                        An incredibly healing Japanese novel that makes me appreciate cozy, quiet second-hand bookstores.
+                    </div>
+                </div>
+
+                <div class="polaroid">
+                    <img src="images/book2.jpg.jpg" alt="Educated by Tara Westover" />
+                    <div class="polaroid-caption">
+                        <strong>Educated</strong>
+                        A profound and thought-provoking memoir about resilience, life, and the deep power of knowledge.
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+        <div class="quote-section">
+            "Collecting memories in frames, and exploring worlds through pages."
+        </div>
+
+        <div class="footer-text">
+            <p>Arni Karmila binti Mohd Rashid 2024281422 KCDIM1444E</p>
+            <p>Disclaimer: This website is created for IML254 assignment purpose only. Best viewed using Google Chrome | 1366x768</p>
+            <p>Last updated: April 2026</p>
+        </div>
+
+    </div> 
+
+    <script type="text/javascript">
+        //<![CDATA[
+        document.querySelectorAll('.slider-container').forEach(function(slider) {
+            slider.setAttribute('data-slide-index', 1);
+            showSlides(slider, 1);
+        });
+
+        function plusSlides(button, n) {
+            var slider = button.parentElement;
+            var currentIndex = parseInt(slider.getAttribute('data-slide-index'), 10);
+            var newIndex = currentIndex + n;
+            slider.setAttribute('data-slide-index', newIndex);
+            showSlides(slider, newIndex);
+        }
+
+        function showSlides(slider, n) {
+            var slides = slider.getElementsByClassName("slides");
+            var currentIndex = n;
+            
+            if (n > slides.length) { 
+                currentIndex = 1; 
+                slider.setAttribute('data-slide-index', 1);
+            }
+            if (n < 1) { 
+                currentIndex = slides.length; 
+                slider.setAttribute('data-slide-index', slides.length);
+            }
+            
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[currentIndex - 1].style.display = "block";
+        }
+        //]]>
+    </script>
+</body>
+</html>

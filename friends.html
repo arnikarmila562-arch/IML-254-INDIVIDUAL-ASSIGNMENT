@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="keywords" content="Friends, Friendship, University Memories, Classmates, Arni Karmila, UiTM" />
+   <meta name="description" content="A special dedication page for Arni Karmila's university support system and best friends." />
+   <meta name="author" content="Arni Karmila" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>My Friends</title>
+
+   <style type="text/css">
+       /* PAGE BACKGROUND */
+       body {
+           margin: 0;
+           padding: 40px 20px;
+           font-family: Georgia, serif;
+           background-image: url('images/background4.jpg.jpg');
+           background-size: 250px;
+           background-color: #f3ece4;
+           text-align: center;
+       }
+
+       /* MAIN CONTAINER */
+       .container {
+            width: 1200px;
+            margin: auto;
+            background: #fffdf7;
+            border: 4px solid #d7c3b3;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(114, 24, 38, 0.1);
+            box-sizing: border-box;
+       }
+       
+       /* NAVIGATION AREA*/
+       .navigation-area {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #d7c3b3;
+       }
+       .navigation-area nav a {
+            color: #721826;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            font-size: 15px;
+       }
+       .navigation-area nav a:hover {
+            color: #cbd560;
+            text-decoration: underline;
+       }
+       
+       .page-title {
+            font-size: 48px;
+            color: #d7b500;
+            margin-bottom: 5px;
+            font-weight: bold;
+       }
+
+       .instruction {
+            color: #3e3328;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 18px;
+       }
+
+       /* SLIDER WINDOW */
+       .slider-window {
+            position: relative;
+            width: 100%;
+            height: 650px;
+            margin: auto;
+            overflow: hidden;
+            border: 6px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+       }
+       
+       .slider-track {
+            display: flex;
+            width: 1000%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out; 
+       }
+
+       .slider-track img {
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+       }
+
+       /* NAVIGATION BUTTONS */
+       .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 15px 22px;
+            background: rgba(255, 255, 255, 0.85); 
+            border: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+            z-index: 10;
+       }
+       .nav-btn:hover {
+            background: #cbd560;
+            color: white;
+       }
+
+       /* FRIENDSHIP STORY SECTION */
+       .story-section {
+            max-width: 850px;
+            margin: 40px auto 10px;
+            background: #fff;
+            border: 2px solid #eadecc;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+            text-align: center;
+       }
+
+       .story-section h2 {
+            color: #721826;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 20px;
+       }
+       
+       .story-section p {
+            color: #544438;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+       }
+
+       .story-footer {
+            font-style: italic;
+            color: #8c7662;
+            font-size: 15px;
+            margin-top: 25px;
+            display: block;
+       }
+
+       /* FOOTER */
+       .footer-text {
+            margin-top: 40px;
+            font-style: italic;
+            color: #8c7662;
+            font-size: 14px;
+            font-family: Georgia, serif;
+            border-top: 1px solid #eadecc;
+            padding-top: 20px;
+       }
+   </style>
+</head>
+<body>
+ 
+   <div class="container">
+      <div class="navigation-area">
+          <nav>
+              <a href="index.html">Home</a>
+              <a href="about.html">About Me</a>
+              <a href="education.html">Education</a>
+              <a href="family.html">Family</a>
+              <a href="friends.html">Friends</a>
+              <a href="hobbies.html">Hobbies</a>
+              <a href="gallery.html">Gallery</a>
+          </nav>
+      </div>
+
+      <h1 class="page-title">My Friends</h1>
+      <p class="instruction">Good times with friends make the best memories.</p>
+
+      <div class="slider-window">
+          <div class="slider-track" id="track">
+              <img src="images/friends.jpg.jpg" alt="Friends 1" />
+              <img src="images/friends2.jpg.jpg" alt="Friends 2" />
+              <img src="images/friends3.jpg.jpg" alt="Friends 3" />
+              <img src="images/friends4.jpg.jpg" alt="Friends 4" />
+              <img src="images/friends5.jpg.jpg" alt="Friends 5" />
+              <img src="images/friends6.jpg.jpg" alt="Friends 6" />
+              <img src="images/friends7.jpg.jpg" alt="Friends 7" />
+              <img src="images/friends8.jpg.jpg" alt="Friends 8" />
+              <img src="images/friends9.jpg.jpg" alt="Friends 9" />
+              <img src="images/friends10.jpg.jpg" alt="Friends 10" />
+          </div>
+          <button class="nav-btn" style="left: 20px;" onclick="move(-1)">Prev</button>
+          <button class="nav-btn" style="right: 20px;" onclick="move(1)">Next</button>
+      </div>
+
+      <div class="story-section">
+          <h2>To the Days We Won't Forget</h2>
+          <p style="font-style: italic; color: #8c7662; margin-top: -15px; margin-bottom: 25px; font-size: 16px;">
+             With my friends: Hani, Farah, Iklil, Hanan, Farihah, Hakimah, Wani, Fatin, Mira, Sofi and Me.</p>
+          <p>
+             True friendship isn't about being inseparable; it's about being separated and knowing nothing will change. Throughout my university journey, these are the people who have filled my days with laughter, shared the weight of countless group assignments, and turned ordinary moments into unforgettable memories.
+          </p>
+          <p>
+             From spontaneous food hunting trips and aesthetic cafe dates to late-night study sessions, every memory holds a special place in my heart. They are not just classmates or friends; they are the support system that keeps me going, making the stressful days brighter and the good days even better.
+          </p>
+          <span class="story-footer">- Grateful for every chapter we write together.</span>
+      </div>
+
+      <div class="footer-text">
+          <p>Arni Karmila binti Mohd Rashid 2024281422 KCDIM1444E</p>
+          <p>Disclaimer: This website is created for IML254 assignment purpose only. Best viewed using Google Chrome | 1366x768</p>
+          <p>Last updated: April 2026</p>
+      </div>
+   </div>
+
+   <script type="text/javascript">
+       //<![CDATA[
+       let index = 0;
+       const track = document.getElementById('track');
+       function move(n) {
+           index = (index + n + 10) % 10;
+           track.style.transform = `translateX(-${index * 10}%)`;
+       }
+       //]]>
+   </script>
+</body>
+</html>

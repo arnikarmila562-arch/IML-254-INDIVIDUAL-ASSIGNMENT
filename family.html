@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="keywords" content="Family, Family Portrait, Parents, Siblings, Arni Karmila, UiTM" />
+   <meta name="description" content="A personal dedication page by Arni Karmila introducing her beloved family members." />
+   <meta name="author" content="Arni Karmila" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>My Family</title>
+
+   <style type="text/css">
+       /* PAGE BACKGROUND */
+       body {
+           margin: 0;
+           padding: 40px 20px;
+           font-family: Georgia, serif;
+           background-image: url('images/background3.jpg.jpg');
+           background-size: 250px;
+           background-color: #f3ece4;
+           text-align: center;
+       }
+
+       /* MAIN WHITE CONTAINER */
+       .container {
+           width: 90%; 
+           max-width: 1700px;
+           margin: auto;
+           background: #fffdf7;
+           border: 4px solid #d7c3b3;
+           border-radius: 20px;
+           padding: 40px;
+           box-shadow: 0 5px 20px rgba(114, 24, 38, 0.1);
+           box-sizing: border-box;
+       }
+
+       /* NAVIGATION AREA */
+       .navigation-area {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #d7c3b3;
+       }
+       .navigation-area nav a {
+            color: #721826;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            font-size: 15px;
+       }
+       .navigation-area nav a:hover {
+            color: #d7b500;
+            text-decoration: underline;
+       }
+
+       .page-title {
+            font-size: 48px;
+            color: #d7b500;
+            margin-bottom: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+       }
+
+       .instruction {
+           color: #8c7662;
+           font-style: italic;
+           margin-bottom: 30px;
+           font-size: 18px;
+       }
+
+       /* SLIDER WINDOW */
+       .slider-window {
+           position: relative;
+           width: 100%;
+           height: 650px; 
+           margin: auto;
+           overflow: hidden;
+           border: 6px solid #fff;
+           border-radius: 15px;
+           box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+       }
+       .slider-track {
+           display: flex;
+           width: 600%;
+           height: 100%;
+           transition: transform 0.5s ease-in-out;
+       }
+       .slider-track img {
+           width: 16.66%;
+           height: 100%;
+           object-fit: cover; 
+       }
+       
+       /* NAVIGATION BUTTONS */
+       .nav-btn {
+           position: absolute;
+           top: 50%;
+           transform: translateY(-50%);
+           cursor: pointer;
+           padding: 15px 22px;
+           background: rgba(255, 255, 255, 0.85);
+           border: none;
+           font-weight: bold;
+           font-size: 18px;
+           border-radius: 8px;
+           transition: 0.3s;
+           z-index: 10;
+       }
+       .nav-btn:hover {
+           background: #721826;
+           color: white;
+       }
+
+       /* WIDER MEMBER CARDS GRID */
+       .family-grid {
+           display: grid;
+           grid-template-columns: 1fr 1fr; 
+           gap: 25px;
+           margin-top: 40px;
+           text-align: left;
+           margin-bottom: 20px;
+       }
+       .member-card {
+           background: #fff;
+           border: 2px solid #eadecc;
+           padding: 25px;
+           border-radius: 15px;
+           box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+       }
+       .member-card h3 {
+           margin: 0 0 8px 0;
+           color: #721826;
+           font-size: 26px;
+       }
+       .member-card p {
+           margin: 0;
+           color: #544438;
+           font-size: 18px;
+           line-height: 1.4;
+       }
+
+       /* FOOTER */
+       .footer-text {
+            margin-top: 40px;
+            font-style: italic;
+            color: #8c7662;
+            font-size: 14px;
+            font-family: Georgia, serif;
+            border-top: 1px solid #eadecc;
+            padding-top: 20px;
+            text-align: center;
+       }
+   </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navigation-area">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="education.html">Education</a>
+                <a href="family.html">Family</a>
+                <a href="friends.html">Friends</a>
+                <a href="hobbies.html">Hobbies</a>
+                <a href="gallery.html">Gallery</a>
+            </nav>
+        </div>
+
+        <h1 class="page-title">Family Portrait</h1>
+        <p class="instruction">Meet the people who mean the world to me.</p>
+
+        <div class="slider-window">
+            <div class="slider-track" id="track">
+                <img src="images/family.jpg.jpg" alt="Family Photo 1" />
+                <img src="images/family2.jpg.jpg" alt="Family Photo 2" />
+                <img src="images/family3.jpg.jpg" alt="Family Photo 3" />
+                <img src="images/family4.jpg.jpg" alt="Family Photo 4" />
+                <img src="images/family5.jpg.jpg" alt="Family Photo 5" />
+                <img src="images/family6.jpg.jpg" alt="Family Photo 6" />
+            </div>
+            <button class="nav-btn" style="left: 20px;" onclick="move(-1)">Prev</button>
+            <button class="nav-btn" style="right: 20px;" onclick="move(1)">Next</button>
+        </div>
+
+        <div class="family-grid">
+            <div class="member-card">
+                <h3>Mohd Rashid bin MD Nor</h3>
+                <p>Father: A hardworking and loving leader who always puts the family first.</p>
+            </div>
+            <div class="member-card">
+                <h3>Shahdah Razali</h3>
+                <p>Mother: The heart and warmth of our home.</p>
+            </div>
+            <div class="member-card">
+                <h3>Muhammad Hazziq bin Mohd Rashid</h3>
+                <p>Big Brother: The eldest sibling who keeps us grounded and looked after.</p>
+            </div>
+            <div class="member-card">
+                <h3>Arni Karmila binti Mohd Rashid</h3>
+                <p>Me: The creative developer behind this website, capturing our best memories.</p>
+            </div>
+            <div class="member-card">
+                <h3>Aireina Aisyah binti Mohd Rashid</h3>
+                <p>Sister: A kind-hearted soul who always listens and cheers for us.</p>
+            </div>
+            <div class="member-card">
+                <h3>Muhammad Luth Zareef bin Mohd Rashid</h3>
+                <p>Younger Brother: The joyful spark who fills the house with high energy and laughter.</p>
+            </div>
+        </div>
+
+        <div class="footer-text">
+            <p>Arni Karmila binti Mohd Rashid 2024281422 KCDIM1444E</p>
+            <p>Disclaimer: This website is created for IML254 assignment purpose only. Best viewed using Google Chrome | 1366x768</p>
+            <p>Last updated: April 2026</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        let index = 0;
+        const track = document.getElementById('track');
+        function move(n) {
+            index = (index + n + 6) % 6;
+            track.style.transform = `translateX(-${index * 16.66}%)`;
+        }
+        //]]>
+    </script>
+</body>
+</html>
